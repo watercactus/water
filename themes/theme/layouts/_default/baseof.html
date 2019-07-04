@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ .Page.Language | default "en" }}">
+<head>
+{{- partial "head.html" . -}}
+{{- partial "custom-head.html" . -}}
+</head>
+<body>
+<div class="container">
+{{- partial "notification.html" . -}}
+{{- partial "header.html" . -}}
+
+{{- partial "main-menu.html" . -}}
+<div class="content-container">
+<main>
+{{- block "main" . -}}
+{{- end -}}
+<footer>
+{{- partial "main-footer.html" . -}}
+</footer>
+</main>
+
+{{- partial "sidebar.html" . -}}
+</div>
+{{- partial "footer.html" . -}}
+</div>
+<script type="text/javascript">
+  flag=true;
+
+  function transformfunc(){
+    Xsub= document.getElementById('sidebar');
+    if (flag) {
+       // alert(1);
+      document.getElementsByClassName('sidebar')[0].style.flex= "0 0 10%";
+      //document.getElementsByClassName('transform')[0].style.backgroundColor="red";
+      document.getElementsByClassName('transform')[0].style.fontSize="1";
+      document.getElementsByClassName('transform')[0].style.backgroundImage = "url(transform2.png)";
+        //document.getElementsByClassName('transform')[0].innerText()="";
+       flag=false;
+    }
+    else{
+      //alert(2);
+      flag=true;
+
+      document.getElementsByClassName('sidebar')[0].style.flex= "0 0 25%";
+      document.getElementsByClassName('sidebar')[0].style.height= "100%";
+    }
+  }
+</script>
+</body>
+</html>

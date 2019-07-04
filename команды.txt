@@ -1,0 +1,6 @@
+hugo server -D
+hugo server -t hugo-theme-techdoc
+
+
+npm install
+npm run srch_reindex

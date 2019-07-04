@@ -1,0 +1,4 @@
+baseURL = "http://dev5003.pob.adc.spb.ru/"
+languageCode = "ru"
+title = "Справка"
+theme = "theme"
